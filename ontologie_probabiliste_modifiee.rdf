@@ -1,0 +1,368 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/thinkpad/ontologies/2024/2/untitled-ontology-2"
+         xmlns="http://www.semanticweb.org/thinkpad/ontologies/2024/2/untitled-ontology-2#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/thinkpad/ontologies/2024/2/untitled-ontology-2"/>
+
+<owl:ObjectProperty rdf:about="#has_Home_Status">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="#HomeStatus"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_Socio-Economic_Status">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="#SocioEconomicStatus"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_comorbidity">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="#Comorbidity"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_diabete">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="#Diabete"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_work_status">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="#WorkStatus"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#involves">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Comorbidity"/>
+  <rdfs:range rdf:resource="#Patient"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#AGE_GROUP">
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#BMI">
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#DEPRESSION">
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#DIABETES">
+  <rdfs:domain rdf:resource="#Diabete"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#Duration">
+  <rdfs:domain rdf:resource="#Diabete"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#EDUCATION">
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#EMPLOY_GROUP">
+  <rdfs:domain rdf:resource="#WorkStatus"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#ETHNICITY">
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#EXERCISE">
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#HOME_OWN">
+  <rdfs:domain rdf:resource="#HomeStatus"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#INCOME">
+  <rdfs:domain rdf:resource="#WorkStatus"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#MENTHLTH">
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#SCANT_MEAL">
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:domain rdf:resource="#SocioEconomicStatus"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#SCANT_RENT">
+  <rdfs:domain rdf:resource="#HomeStatus"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#SES_CATE">
+  <rdfs:domain rdf:resource="#SocioEconomicStatus"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#SEX">
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#has_scant_rent">
+  <rdfs:domain rdf:resource="#SocioEconomicStatus"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#is_depressed">
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#is_diabetic">
+  <rdfs:domain rdf:resource="#Diabete"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#pr_depression">
+  <rdfs:domain rdf:resource="#Comorbidity"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#pr_exercise">
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#pr_long_duration">
+  <rdfs:domain rdf:resource="#Diabete"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#pr_medium_duration">
+  <rdfs:domain rdf:resource="#Diabete"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#pr_obesity">
+  <rdfs:domain rdf:resource="#Patient"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#pr_scant_meal">
+  <rdfs:domain rdf:resource="#SocioEconomicStatus"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#pr_scant_rent">
+  <rdfs:domain rdf:resource="#HomeStatus"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#pr_short_duration">
+  <rdfs:domain rdf:resource="#Diabete"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Patient"/>
+
+<owl:Class rdf:about="#HomeStatus">
+  <rdfs:subClassOf rdf:resource="#SocioEconomicStatus"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SocioEconomicStatus"/>
+
+<owl:Class rdf:about="#Comorbidity"/>
+
+<owl:Class rdf:about="#Diabete"/>
+
+<owl:Class rdf:about="#WorkStatus">
+  <rdfs:subClassOf rdf:resource="#SocioEconomicStatus"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#ALI">
+  <rdf:type rdf:resource="#Patient"/>
+  <AGE_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</AGE_GROUP>
+  <BMI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">overweight</BMI>
+  <Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</Duration>
+  <EMPLOY_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</EMPLOY_GROUP>
+  <ETHNICITY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ETHNICITY>
+  <EXERCISE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</EXERCISE>
+  <HOME_OWN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</HOME_OWN>
+  <MENTHLTH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</MENTHLTH>
+  <SCANT_MEAL rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</SCANT_MEAL>
+  <SCANT_RENT rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</SCANT_RENT>
+  <SES_CATE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SES_CATE>
+  <SEX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SEX>
+  <is_diabetic rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</is_diabetic>
+  <pr_depression rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.75</pr_depression>
+  <pr_exercise rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5815</pr_exercise>
+  <pr_long_duration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0977</pr_long_duration>
+  <pr_medium_duration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7276</pr_medium_duration>
+  <pr_obesity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.426</pr_obesity>
+  <pr_scant_meal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5297000000000001</pr_scant_meal>
+  <pr_scant_rent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1663</pr_scant_rent>
+  <pr_short_duration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1747</pr_short_duration>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Ahmed">
+  <rdf:type rdf:resource="#Patient"/>
+  <AGE_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</AGE_GROUP>
+  <BMI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obese</BMI>
+  <Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</Duration>
+  <EDUCATION rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</EDUCATION>
+  <EMPLOY_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</EMPLOY_GROUP>
+  <ETHNICITY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ETHNICITY>
+  <EXERCISE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</EXERCISE>
+  <HOME_OWN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</HOME_OWN>
+  <INCOME rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</INCOME>
+  <MENTHLTH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</MENTHLTH>
+  <SCANT_MEAL rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SCANT_MEAL>
+  <SCANT_RENT rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SCANT_RENT>
+  <SES_CATE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SES_CATE>
+  <SEX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SEX>
+  <pr_depression rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</pr_depression>
+  <pr_exercise rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5815</pr_exercise>
+  <pr_long_duration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0977</pr_long_duration>
+  <pr_medium_duration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7276</pr_medium_duration>
+  <pr_obesity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5184</pr_obesity>
+  <pr_scant_meal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9391</pr_scant_meal>
+  <pr_scant_rent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9841000000000001</pr_scant_rent>
+  <pr_short_duration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1747</pr_short_duration>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Salah">
+  <rdf:type rdf:resource="#Patient"/>
+  <AGE_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</AGE_GROUP>
+  <BMI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obese</BMI>
+  <Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</Duration>
+  <EDUCATION rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</EDUCATION>
+  <EMPLOY_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</EMPLOY_GROUP>
+  <ETHNICITY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ETHNICITY>
+  <EXERCISE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</EXERCISE>
+  <HOME_OWN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</HOME_OWN>
+  <INCOME rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</INCOME>
+  <MENTHLTH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</MENTHLTH>
+  <SCANT_MEAL rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SCANT_MEAL>
+  <SCANT_RENT rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</SCANT_RENT>
+  <SES_CATE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SES_CATE>
+  <SEX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SEX>
+  <is_diabetic rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</is_diabetic>
+  <pr_depression rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</pr_depression>
+  <pr_exercise rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5815</pr_exercise>
+  <pr_obesity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5184</pr_obesity>
+  <pr_scant_meal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.65</pr_scant_meal>
+  <pr_short_duration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1747</pr_short_duration>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#patient1">
+  <rdf:type rdf:resource="#Patient"/>
+  <AGE_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</AGE_GROUP>
+  <EDUCATION rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</EDUCATION>
+  <ETHNICITY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ETHNICITY>
+  <EXERCISE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</EXERCISE>
+  <HOME_OWN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</HOME_OWN>
+  <INCOME rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</INCOME>
+  <MENTHLTH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</MENTHLTH>
+  <SES_CATE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SES_CATE>
+  <SEX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SEX>
+  <is_diabetic rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</is_diabetic>
+  <pr_depression rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5085</pr_depression>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#patient3">
+  <rdf:type rdf:resource="#Patient"/>
+  <AGE_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</AGE_GROUP>
+  <BMI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">overweight</BMI>
+  <EDUCATION rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</EDUCATION>
+  <EMPLOY_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</EMPLOY_GROUP>
+  <EXERCISE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</EXERCISE>
+  <INCOME rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</INCOME>
+  <MENTHLTH rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</MENTHLTH>
+  <SES_CATE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SES_CATE>
+  <SEX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SEX>
+  <is_diabetic rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</is_diabetic>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#jdid bel modele jdid">
+  <rdf:type rdf:resource="#Patient"/>
+  <AGE_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</AGE_GROUP>
+  <SEX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SEX>
+  <ETHNICITY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ETHNICITY>
+  <EXERCISE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</EXERCISE>
+  <INCOME rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</INCOME>
+  <EMPLOY_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</EMPLOY_GROUP>
+  <EDUCATION rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</EDUCATION>
+  <SES_CATE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SES_CATE>
+  <BMI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</BMI>
+  <is_diabetic rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</is_diabetic>
+  <pr_depression rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</pr_depression>
+  <pr_medium_duration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0013</pr_medium_duration>
+  <pr_long_duration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9962</pr_long_duration>
+  <pr_short_duration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0013</pr_short_duration>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#FAYCAL BOUBEBKRI">
+  <rdf:type rdf:resource="#Patient"/>
+  <AGE_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</AGE_GROUP>
+  <SEX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SEX>
+  <ETHNICITY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ETHNICITY>
+  <EXERCISE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</EXERCISE>
+  <INCOME rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</INCOME>
+  <EMPLOY_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</EMPLOY_GROUP>
+  <EDUCATION rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</EDUCATION>
+  <SCANT_RENT rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</SCANT_RENT>
+  <SCANT_MEAL rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</SCANT_MEAL>
+  <HOME_OWN rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</HOME_OWN>
+  <SES_CATE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SES_CATE>
+  <BMI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</BMI>
+  <is_diabetic rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</is_diabetic>
+  <pr_depression rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</pr_depression>
+  <pr_obesity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1145</pr_obesity>
+  <pr_exercise rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3542</pr_exercise>
+  <pr_scant_meal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7008000000000001</pr_scant_meal>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#patient4">
+  <rdf:type rdf:resource="#Patient"/>
+  <SES_CATE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SES_CATE>
+  <Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">short</Duration>
+  <is_diabetic rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</is_diabetic>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#samir">
+  <rdf:type rdf:resource="#Patient"/>
+  <AGE_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</AGE_GROUP>
+  <SEX rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SEX>
+  <ETHNICITY rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ETHNICITY>
+  <INCOME rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</INCOME>
+  <EMPLOY_GROUP rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</EMPLOY_GROUP>
+  <SCANT_RENT rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</SCANT_RENT>
+  <SCANT_MEAL rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SCANT_MEAL>
+  <SES_CATE rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SES_CATE>
+  <Duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</Duration>
+  <BMI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</BMI>
+  <is_diabetic rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</is_diabetic>
+  <pr_medium_duration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0966</pr_medium_duration>
+  <pr_short_duration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0003</pr_short_duration>
+  <pr_depression rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5418</pr_depression>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
